@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // Lê entradas do teclado
-        playlist playlist = new playlist();  // Cria a playlist
+        Scanner sc = new Scanner(System.in); 
+        playlist playlist = new playlist();
         int opcao;
 
-        do { // Menu principal
+        do { 
             System.out.println("\n=== Gerenciador de Playlist ===");
             System.out.println("1. Adicionar música");
             System.out.println("2. Remover música");
@@ -17,7 +17,7 @@ public class main {
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
-            sc.nextLine(); // Limpa o buffer do teclado
+            sc.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -27,7 +27,7 @@ public class main {
                     String artista = sc.nextLine();
                     System.out.print("Duração (minutos): ");
                     double duracao = sc.nextDouble();
-                    sc.nextLine(); // Limpa buffer
+                    sc.nextLine();
                     musica musica = new musica(titulo, artista, duracao);
                     playlist.adicionarMusica(musica);
                     break;
@@ -53,9 +53,9 @@ public class main {
                 default:
                     System.out.println("Opção inválida!");
             }
-        } while (opcao != 0); // Repete até o usuário sair
+        } while (opcao != 0); 
 
-        sc.close(); // Fecha o Scanner
+        sc.close(); 
     }
 }
 
